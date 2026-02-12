@@ -1,14 +1,7 @@
 #ifndef SCALARCONVERTER_HPP
 # define SCALARCONVERTER_HPP
-# include <iostream>
 
-enum type {
-    CHAR,
-    INT,
-    FLOAT, 
-    DOUBLE,
-    STR
-};
+# include <iostream>
 
 class ScalarConverter
 {
@@ -28,13 +21,14 @@ class ScalarConverter
         static bool _isDouble(const std::string& s);
         static bool _isSpecialCase(const std::string& s);
 
-
-    public:
+        //orthodox canonical form
         ScalarConverter(void);
         ScalarConverter(const ScalarConverter& other);
         ScalarConverter &operator=(const ScalarConverter &other);
         ~ScalarConverter();
 
+
+    public:
         static void convert(std::string const &str);
 };
 
